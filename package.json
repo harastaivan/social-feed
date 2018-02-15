@@ -1,0 +1,14 @@
+{
+  "name": "social-feed",
+  "version": "1.0.0",
+  "description": "Combining feeds from various social networks into one big feed",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ivan Harasta",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
