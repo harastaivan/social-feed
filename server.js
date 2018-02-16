@@ -12,9 +12,9 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/api/search/tweets', (req, res) => {
-  res.send({ express: 'Hello From Twitter' });
-  T.get('search/tweets', {q: 'banana since:2018-2-1', count: 5}, (err, data, response) => {
+  T.get('search/tweets', {q: 'dear developers since:2018-2-1', count: 1}, (err, data, response) => {
     console.log(data)
+    res.send({ express: data })
   })
 });
 

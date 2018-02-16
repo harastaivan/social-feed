@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch('/api/hello');
+    const response = await fetch('/api/search/tweets');
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
@@ -23,13 +23,14 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.response)
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Social Feed</h1>
         </header>
-        <p className="App-intro">{this.state.response}</p>
+        <p className="App-intro">{this.state.response ? this.state.response.statuses[0].text : 'Loading'}</p>
       </div>
     );
   }
