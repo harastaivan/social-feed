@@ -4,15 +4,20 @@
   "description": "Combining feeds from various social networks into one big feed",
   "main": "index.js",
   "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
     "start": "node index.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "test": "jest"
   },
   "author": "Ivan Harasta",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.2",
     "twit": "^2.2.9"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "jest": "^22.3.0"
   }
 }
