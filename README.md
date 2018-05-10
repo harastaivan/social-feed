@@ -7,3 +7,7 @@ facebook, twitter and instagram feed in one big feed
 2. Change working directory to cloned repo: ```cd repo```
 3. Install dependencies. ```npm install```
 4. Start a development server. ```npm run dev```
+
+## License
+
+[MIT](https://github.com/harastaivan/social-feed/blob/master/LICENSE)
